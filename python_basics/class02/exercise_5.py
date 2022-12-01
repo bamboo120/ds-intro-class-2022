@@ -5,10 +5,12 @@ Edit this file to complete Exercise 5
 # 1. rite a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included).
 
 # code up your solution here
-
-
-
-
+num=[]
+list_num = range(1500,2701)
+for i in list_num:
+    if (i%7==0) and (i%5==0):
+        num.append(i)
+print(num)
 
 # 2. Write a Python program to count the number of even and odd numbers from a series of numbers.
 
@@ -18,7 +20,16 @@ Edit this file to complete Exercise 5
 # >>> Number of odd numbers : 5
 
 # code up your solution here
-
+even = 0
+odd = 0
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+for i in numbers:
+    if i%2 == 0:
+        even +=1
+    else:
+        odd +=1
+print("Number of even numbers : ",even)
+print("Number of odd numbers : ",odd)
 
 
 
@@ -34,7 +45,15 @@ Edit this file to complete Exercise 5
 # >>> ...
 
 # code up your solution here
-
+for i in range(51):
+    if i%3==0 and i%5==0:
+        print("FizzBuzz")
+    elif i%3==0:
+        print("Fizz")
+    elif i%5==0:
+        print("Buzz")
+    else:
+        print(i)
 
 
 
@@ -49,25 +68,41 @@ Edit this file to complete Exercise 5
 # >>> 150
 
 # code up your solution here
-
+list1 = [12, 15, 32, 42, 55, 75, 122, 132, 150, 180, 200]
+for i in list1:
+    if i > 150:
+        break
+    if i%5==0:
+        print(i)
+    
 
 
 
 # 5. Pick one of the questions above and use range() for a different solution
 
 # code up your solution here
-
+num=[]
+for i in range(1500,2701):
+    if (i%7==0) and (i%5==0):
+        num.append(i)
+print(num)
 
 
 
 # 6. Pick one of the question above and use comprehension for a different solution
 
 # code up your solution here
-
+[x  for x in range(1500,2701) if x%5==0 and x%7==0]
 
 
 
 # 7. Pcik one of the questions above and use while loop for a different solution
+a = 1500
+value=[]
+while a<2701:
+    if a%5==0 and a%7==0:
+        value.append(a)
+    a+=1
 
 # code up your solution here
 
